@@ -3,7 +3,7 @@ version: '3.8'
 services:
   test-springboot-container:
     build:
-    image: test-spring-boot-docker-compose:1
+    image: test-springboot-demo:1
     ports:
       - "8080:8080"
     volumes:
