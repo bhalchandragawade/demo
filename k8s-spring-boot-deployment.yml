@@ -21,14 +21,18 @@ spec:
             - name: PORT
               value: "8080"
 
+---
 apiVersion: v1
 kind: Service
 metadata:
   name: test-springboot
+  annotations:
+    service.beta.kubernetes.io/aws-load-balancer-type: "nlb"
 spec:
   type: LoadBalancer
   ports:
     - port: 80
       targetPort: 8080
+      protocol: TCP
   selector:
     app: test-springboot
