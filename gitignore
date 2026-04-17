@@ -1,0 +1,57 @@
+# =====================
+# Gradle
+# =====================
+.gradle/
+build/
+out/
+
+!gradle-wrapper.jar
+!gradle-wrapper.properties
+
+# =====================
+# Spring Boot
+# =====================
+*.log
+
+# =====================
+# IntelliJ IDEA
+# =====================
+.idea/
+*.iws
+*.iml
+*.ipr
+out/
+
+# =====================
+# Eclipse
+# =====================
+.project
+.classpath
+.settings/
+bin/
+
+# =====================
+# VS Code
+# =====================
+.vscode/
+
+# =====================
+# OS files
+# =====================
+.DS_Store
+Thumbs.db
+
+# =====================
+# Java
+# =====================
+*.class
+
+# =====================
+# Spring Boot secrets
+# =====================
+application-local.properties
+application-dev.properties
+application-prod.properties
+
+# Environment files
+.env
