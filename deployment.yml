@@ -17,3 +17,23 @@ spec:
           image: bhalchandragawade08/test-docker-demo:test-springboot-demo
           ports:
             - containerPort: 8080
+
+          # 🔴 Liveness probe (restart pod if app is dead)
+          livenessProbe:
+            httpGet:
+              path: /actuator/health
+              port: 8080
+            initialDelaySeconds: 30
+            periodSeconds: 10
+            timeoutSeconds: 5
+            failureThreshold: 3
+
+          # 🟢 Readiness probe (only send traffic if app is ready)
+          readinessProbe:
+            httpGet:
+              path: /actuator/health
+              port: 8080
+            initialDelaySeconds: 15
+            periodSeconds: 5
+            timeoutSeconds: 3
+            failureThreshold: 3
