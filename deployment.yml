@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: demo-app
-          image: bhalchandragawade08/test-docker-demo:test-springboot-demo
+          image: bhalchandragawade08/test-docker-demo:latest
           ports:
             - containerPort: 8080
 
