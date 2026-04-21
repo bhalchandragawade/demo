@@ -1,9 +1,15 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: demo-namespace
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: demo-app
+  namespace: demo-namespace
 spec:
-  replicas: 2
+  replicas: 4
   selector:
     matchLabels:
       app: demo-app
